@@ -11,11 +11,14 @@ zookeeper:127.0.0.1:2181 127.0.0.1:2182 127.0.0.1:2181
 redis:127.0.0.1:6379
 rabbitmq:127.0.0.1:5672
 apollo/eureka:127.0.0.1:8080
+dubbo-admin:127.0.0.1:8081/dubbo-admin-2.6.0/
 
 ## Dubbo
    高性能的RPC框架，注册中心基于Zookeeper，本系统采用了3个ZK的集群，保证高可用！
    采用Dubbo作为RPC框架还是其高性能所吸引，底层的通信框架采用的netty，性能绝壁好！
    切记，采用Dubbo最为RPC框架，所有的诸如domain,dto实体都需要继承Serializable接口，实现序列化！
+## Dubbo-Admin
+   类似于eureka的可视化界面
 ## Zookeeper
    本Dubbo框架采用的注册中心是Zookeeper，上述也说到了，采用了3个zk保证高可用！在真实项目中，至少也需要5台吧！
    在本系统中，zk仅作为注册中心注册服务url。
