@@ -6,6 +6,12 @@
 电商的下单扣减库存，取消恢复库存。这一看似简单的逻辑背后的数据一致性，微服务治理，高可用的保证还是十分复杂的！
 先简述下本框架所使用的业务架构:
 ### Dubbo+Zookeeper+Apollo+Redis+Rabbitmq+Springboot+Maven+Mysql（是不是很分布式的一套框架！但是整合在一起，各司其职，各尽所能才是复杂的，就像TeamLeader需要管理好Follows一样！）
+相关接口地址配置：
+zookeeper:127.0.0.1:2181 127.0.0.1:2182 127.0.0.1:2181
+redis:127.0.0.1:6379
+rabbitmq:127.0.0.1:5672
+apollo/eureka:127.0.0.1:8080
+
 ## Dubbo
    高性能的RPC框架，注册中心基于Zookeeper，本系统采用了3个ZK的集群，保证高可用！
    采用Dubbo作为RPC框架还是其高性能所吸引，底层的通信框架采用的netty，性能绝壁好！
